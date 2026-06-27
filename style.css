@@ -181,7 +181,12 @@ button {
         opacity: 1;
         transform: scale(1);
     }
-
+.eyes img {
+    width: 90vw;
+    max-width: 500px;
+    height: auto;
+    border-radius: 20px;
+}
 }
 
 
