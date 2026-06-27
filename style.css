@@ -215,3 +215,16 @@ transform:scale(1);
 }
 
 }
+.container {
+    display: block;
+}
+
+
+#finger {
+    display: none;
+}
+
+
+#gallery {
+    display: none;
+}
