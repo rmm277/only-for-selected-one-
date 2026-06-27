@@ -8,6 +8,16 @@ document.getElementById("startBtn").onclick = function(){
 
 
 
+document.getElementById("fingerBtn").onclick = function(){
+
+    document.getElementById("finger").style.display = "none";
+
+    document.getElementById("gallery").style.display = "block";
+
+};
+
+
+
 setInterval(function(){
 
     let heart = document.createElement("div");
@@ -29,16 +39,3 @@ setInterval(function(){
 
 
 },700);
-
-
-
-document.getElementById("fingerBtn").onclick = function(){
-
-
-    document.getElementById("finger").style.display = "none";
-
-
-    document.getElementById("gallery").style.display = "block";
-
-
-};
