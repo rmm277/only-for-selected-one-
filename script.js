@@ -39,3 +39,11 @@ setInterval(function(){
 
 
 },700);
+
+document.getElementById("finger").style.display = "block";
+
+document.getElementById("finger").classList.add("fade");
+
+document.getElementById("gallery").style.display = "block";
+
+document.getElementById("gallery").classList.add("fade");
