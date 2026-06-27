@@ -1,8 +1,10 @@
-document.getElementById("startBtn").onclick = function() {
+document.getElementById("startBtn").onclick = function(){
 
+document.querySelector(".container").style.display = "none";
 
-document.getElementById("main").style.opacity = "0";
+document.getElementById("finger").style.display = "block";
 
+};
 
 setTimeout(function(){
 
