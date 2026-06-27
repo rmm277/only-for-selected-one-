@@ -8,27 +8,21 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    position: relative;
 }
 
 
-/* ЗВЁЗДЫ */
+/* Звёзды */
 #stars {
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
-
     background-image: radial-gradient(white 2px, transparent 2px);
     background-size: 45px 45px;
-
     opacity: 0.7;
-    z-index: 1;
 }
 
 
-/* ПЕРВЫЙ ЭКРАН */
+/* Первый экран */
 .container {
     text-align: center;
     position: relative;
@@ -64,97 +58,87 @@ h1 {
 button {
     margin-top: 25px;
     padding: 15px 35px;
-
     border: none;
     border-radius: 30px;
-
     background: #ff4d88;
     color: white;
-
     font-size: 18px;
 }
 
 
-/* ВТОРОЙ ЭКРАН */
+/* Экран с глазами */
 #gallery {
-
     display: none;
-
     text-align: center;
-
     position: relative;
     z-index: 3;
-
     animation: fadeIn 1.5s;
 }
 
 
 #gallery p {
-
     font-size: 26px;
     color: #ff4d88;
-
 }
 
 
-/* ГЛАЗА */
-
+/* САМИ ФОТО */
 .eyes {
-
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 
 .eyes img {
 
-    width: 280px;
-    height: 180px;
+    width: 320px;
+    height: 220px;
 
-    object-fit: cover;
+    object-fit: contain;
 
-    border-radius: 20px;
+    border-radius: 15px;
 
-    margin: 15px;
+    border: 4px solid #ff4d88;
 
-    box-shadow: 0 0 25px #ff4d88;
+    box-shadow: 0 0 30px #ff4d88;
 
     opacity: 0;
+
     animation: eyeShow 1s forwards;
 }
 
 
 .eyes img:nth-child(1) {
-    animation-delay: 0.4s;
+    animation-delay: 0.3s;
 }
+
 
 .eyes img:nth-child(2) {
-    animation-delay: 0.8s;
+    animation-delay: 0.7s;
 }
+
 
 .eyes img:nth-child(3) {
-    animation-delay: 1.2s;
+    animation-delay: 1.1s;
 }
-
 
 
 #finalText {
 
+    color: white;
     margin-top: 25px;
 
-    color: white;
-
-    opacity: 0;
-
     animation: appear 2s forwards;
-
     animation-delay: 2s;
 
+    opacity: 0;
 }
 
 
-/* АНИМАЦИИ */
+
+/* Анимации */
 
 @keyframes appear {
 
@@ -169,7 +153,6 @@ button {
 }
 
 
-
 @keyframes fadeIn {
 
     from {
@@ -181,31 +164,20 @@ button {
         opacity: 1;
         transform: scale(1);
     }
-.eyes img {
-    width: 90vw;
-    max-width: 500px;
-    height: auto;
-    border-radius: 20px;
-}
-}
 
+}
 
 
 @keyframes eyeShow {
 
     from {
-
         opacity: 0;
-        transform: scale(0.7);
-
+        transform: scale(0.8);
     }
 
-
     to {
-
         opacity: 1;
         transform: scale(1);
-
     }
 
 }
