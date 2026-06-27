@@ -1,3 +1,7 @@
 document.getElementById("startBtn").onclick = function() {
-    alert("Я хочу, чтобы ты всегда улыбалась ❤️");
+
+    document.querySelector(".container").style.display = "none";
+
+    document.getElementById("gallery").style.display = "block";
+
 };
