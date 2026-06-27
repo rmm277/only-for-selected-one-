@@ -189,3 +189,18 @@ button {
     border: 5px solid #ff4d88 !important;
     box-shadow: 0 0 30px #ff4d88 !important;
 }
+h1 {
+    font-size: 30px !important;
+}
+
+#gallery p {
+    font-size: 18px !important;
+}
+
+#finalText {
+    font-size: 20px !important;
+}
+
+.text {
+    font-size: 18px !important;
+        }
