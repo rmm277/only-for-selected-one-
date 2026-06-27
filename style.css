@@ -181,3 +181,11 @@ button {
     }
 
 }
+.eyes img {
+    border-radius: 0 !important;
+    width: 320px !important;
+    height: 220px !important;
+    object-fit: contain !important;
+    border: 5px solid #ff4d88 !important;
+    box-shadow: 0 0 30px #ff4d88 !important;
+}
