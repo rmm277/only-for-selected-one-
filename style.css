@@ -23,11 +23,12 @@ body {
 }
 
 
-/* главный экран */
+/* первый экран */
 
 .container {
     text-align:center;
     z-index:2;
+    animation: fadeIn 1s;
 }
 
 
@@ -37,12 +38,24 @@ h1 {
 
 
 .text {
+
     font-size:18px;
+    opacity:0;
+    animation:appear 1.5s forwards;
+
 }
 
 
+.text:nth-child(2){
+    animation-delay:.8s;
+}
 
-/* кнопки */
+
+.text:nth-child(3){
+    animation-delay:1.6s;
+}
+
+
 
 button {
 
@@ -55,7 +68,6 @@ button {
 }
 
 
-
 /* палец */
 
 #finger {
@@ -64,13 +76,13 @@ button {
     text-align:center;
     z-index:5;
 
+    animation:fadeIn .8s;
+
 }
 
 
 #finger h2 {
-
     color:#ff4d88;
-
 }
 
 
@@ -82,6 +94,8 @@ button {
     display:none;
     text-align:center;
     z-index:5;
+
+    animation:fadeIn .8s;
 
 }
 
@@ -96,49 +110,49 @@ button {
 
 .eyes {
 
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:10px;
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:10px;
 
 }
 
 
 .eyes img {
 
-    width:220px;
-    height:140px;
+width:220px;
+height:140px;
 
-    object-fit:contain;
+object-fit:contain;
 
-    border:4px solid #ff4d88;
+border:4px solid #ff4d88;
 
-    box-shadow:0 0 20px #ff4d88;
+box-shadow:0 0 20px #ff4d88;
 
 }
-
 
 
 /* сердечки */
 
 #hearts {
 
-    position:fixed;
-    width:100%;
-    height:100%;
-    pointer-events:none;
-    z-index:10;
+position:fixed;
+width:100%;
+height:100%;
+pointer-events:none;
+z-index:10;
 
 }
 
 
 .heart {
 
-    position:absolute;
-    font-size:25px;
-    animation:float 4s linear;
+position:absolute;
+font-size:25px;
+animation:float 4s linear;
 
 }
+
 
 
 @keyframes float {
@@ -158,108 +172,46 @@ opacity:0;
 }
 
 }
-.text {
-    opacity: 0;
-    animation: appear 2s forwards;
-}
 
-.text:nth-of-type(2) {
-    animation-delay: 1s;
-}
 
-.text:nth-of-type(3) {
-    animation-delay: 2s;
-}
 
+/* анимации */
 
 @keyframes appear {
 
-    from {
-        opacity:0;
-        transform: translateY(20px);
-    }
+from {
 
-    to {
-        opacity:1;
-        transform: translateY(0);
-    }
-
-}
-.fade {
-
-    animation: fade 0.8s ease;
+opacity:0;
+transform:translateY(20px);
 
 }
 
 
-@keyframes fade {
+to {
 
-    from {
-        opacity:0;
-        transform:scale(0.95);
-    }
+opacity:1;
+transform:translateY(0);
 
-
-    to {
-        opacity:1;
-        transform:scale(1);
-    }
-
-        }
-/* плавное появление первого текста */
-.text {
-    opacity: 0;
-    animation: textShow 1.5s forwards;
-}
-
-.text:nth-child(2) {
-    animation-delay: 0.8s;
-}
-
-.text:nth-child(3) {
-    animation-delay: 1.6s;
-}
-
-
-@keyframes textShow {
-
-    from {
-        opacity: 0;
-        transform: translateY(25px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-}
-
-
-/* плавный вход любых экранов */
-#finger,
-#gallery,
-.container {
-
-    animation: screenShow 0.8s ease;
-    #finger,
-#gallery {
-    display:none;
 }
 
 }
 
 
-@keyframes screenShow {
 
-    from {
-        opacity:0;
-        transform:scale(0.9);
-    }
+@keyframes fadeIn {
 
-    to {
-        opacity:1;
-        transform:scale(1);
-    }
+from {
+
+opacity:0;
+transform:scale(.9);
+
+}
+
+to {
+
+opacity:1;
+transform:scale(1);
+
+}
 
 }
