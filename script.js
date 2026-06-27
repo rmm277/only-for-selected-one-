@@ -40,9 +40,20 @@ heart.remove();
 
 
 },700);
+
 document.getElementById("fingerBtn").onclick = function(){
 
 document.getElementById("finger").innerHTML =
 "<h2>✅ Доступ разрешён</h2><p>Добро пожаловать...</p>";
+
+
+setTimeout(function(){
+
+document.getElementById("finger").style.display = "none";
+
+document.getElementById("gallery").style.display = "block";
+
+},2000);
+
 
 };
