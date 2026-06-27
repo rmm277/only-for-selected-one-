@@ -242,6 +242,10 @@ opacity:0;
 .container {
 
     animation: screenShow 0.8s ease;
+    #finger,
+#gallery {
+    display:none;
+}
 
 }
 
