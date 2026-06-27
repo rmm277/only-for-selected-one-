@@ -158,3 +158,30 @@ opacity:0;
 }
 
 }
+.text {
+    opacity: 0;
+    animation: appear 2s forwards;
+}
+
+.text:nth-of-type(2) {
+    animation-delay: 1s;
+}
+
+.text:nth-of-type(3) {
+    animation-delay: 2s;
+}
+
+
+@keyframes appear {
+
+    from {
+        opacity:0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity:1;
+        transform: translateY(0);
+    }
+
+}
