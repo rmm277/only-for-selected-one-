@@ -1,59 +1,54 @@
 document.getElementById("startBtn").onclick = function(){
 
-document.querySelector(".container").style.display = "none";
+    document.querySelector(".container").style.display = "none";
 
-document.getElementById("finger").style.display = "block";
-
-};
-
-setTimeout(function(){
-
-
-document.getElementById("main").style.display = "none";
-
-
-document.getElementById("finger").style.display = "block";
-
-
-},1000);
-
+    document.getElementById("finger").style.display = "block";
 
 };
+
+
+
 setInterval(function(){
 
-let heart = document.createElement("div");
+    let heart = document.createElement("div");
 
-heart.className = "heart";
+    heart.className = "heart";
 
-heart.innerHTML = "❤️";
+    heart.innerHTML = "❤️";
 
-heart.style.left = Math.random() * 100 + "%";
+    heart.style.left = Math.random() * 100 + "%";
 
-document.getElementById("hearts").appendChild(heart);
+    document.getElementById("hearts").appendChild(heart);
 
 
-setTimeout(function(){
+    setTimeout(function(){
 
-heart.remove();
+        heart.remove();
 
-},4000);
+    },4000);
 
 
 },700);
 
+
+
 document.getElementById("fingerBtn").onclick = function(){
 
-document.getElementById("finger").innerHTML =
-"<h2>✅ Доступ разрешён</h2><p>Добро пожаловать...</p>";
+
+    document.getElementById("finger").innerHTML =
+    "<h2>✅ Доступ разрешён</h2><p>Добро пожаловать...</p>";
 
 
-setTimeout(function(){
+    setTimeout(function(){
 
-document.getElementById("finger").style.display = "none";
 
-document.getElementById("gallery").style.display = "block";
+        document.getElementById("finger").style.display = "none";
 
-},2000);
+
+        document.getElementById("gallery").style.display = "block";
+
+
+    },2000);
 
 
 };
