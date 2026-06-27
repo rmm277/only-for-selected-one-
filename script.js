@@ -17,3 +17,24 @@ document.getElementById("gallery").style.display = "block";
 
 
 };
+setInterval(function(){
+
+let heart = document.createElement("div");
+
+heart.className = "heart";
+
+heart.innerHTML = "❤️";
+
+heart.style.left = Math.random() * 100 + "%";
+
+document.getElementById("hearts").appendChild(heart);
+
+
+setTimeout(function(){
+
+heart.remove();
+
+},4000);
+
+
+},700);
