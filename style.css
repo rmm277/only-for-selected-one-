@@ -206,3 +206,56 @@ opacity:0;
     }
 
         }
+/* плавное появление первого текста */
+.text {
+    opacity: 0;
+    animation: textShow 1.5s forwards;
+}
+
+.text:nth-child(2) {
+    animation-delay: 0.8s;
+}
+
+.text:nth-child(3) {
+    animation-delay: 1.6s;
+}
+
+
+@keyframes textShow {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* плавный вход любых экранов */
+#finger,
+#gallery,
+.container {
+
+    animation: screenShow 0.8s ease;
+
+}
+
+
+@keyframes screenShow {
+
+    from {
+        opacity:0;
+        transform:scale(0.9);
+    }
+
+    to {
+        opacity:1;
+        transform:scale(1);
+    }
+
+}
