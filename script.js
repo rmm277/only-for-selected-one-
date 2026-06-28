@@ -39,3 +39,55 @@ setInterval(function(){
 
 
 },700);
+document.getElementById("storyBtn").onclick = function(){
+
+document.getElementById("gallery").style.display="none";
+
+document.getElementById("compliments").style.display="block";
+
+
+let words = [
+"Красивая ❤️",
+"Добрая ✨",
+"Уютная 🌙",
+"Нежная",
+"Особенная",
+"Милая",
+"Искренняя",
+"Заботливая",
+"Светлая",
+"Прекрасная",
+"Улыбчивая",
+"Тёплая",
+"Невероятная",
+"Уникальная",
+"Чудесная",
+"Настоящая",
+"Любимая ❤️"
+];
+
+
+setInterval(function(){
+
+let w=document.createElement("div");
+
+w.className="word";
+
+w.innerHTML=words[Math.floor(Math.random()*words.length)];
+
+w.style.left=Math.random()*80+"%";
+
+document.getElementById("words").appendChild(w);
+
+
+setTimeout(()=>{
+
+w.remove();
+
+},3000);
+
+
+},500);
+
+
+};
