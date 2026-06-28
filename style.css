@@ -11,8 +11,6 @@ body {
 }
 
 
-/* звёзды */
-
 #stars {
     position:fixed;
     width:100%;
@@ -23,12 +21,9 @@ body {
 }
 
 
-/* первый экран */
-
 .container {
     text-align:center;
     z-index:2;
-    animation: fadeIn 1s;
 }
 
 
@@ -38,25 +33,23 @@ h1 {
 
 
 .text {
-
     font-size:18px;
     opacity:0;
     animation:appear 1.5s forwards;
-
 }
 
 
-.text:nth-of-type(1){
+.text:nth-child(1){
     animation-delay:0s;
 }
 
 
-.text:nth-of-type(2){
+.text:nth-child(2){
     animation-delay:.8s;
 }
 
 
-.text:nth-of-type(3){
+.text:nth-child(3){
     animation-delay:1.6s;
 }
 
@@ -69,11 +62,11 @@ button {
     border:none;
     padding:15px 30px;
     border-radius:30px;
+    margin-top:15px;
 
 }
 
 
-/* палец */
 
 #finger {
 
@@ -81,9 +74,8 @@ button {
     text-align:center;
     z-index:5;
 
-    animation:fadeIn .8s;
-
 }
+
 
 
 #finger h2 {
@@ -92,7 +84,6 @@ button {
 
 
 
-/* глаза */
 
 #gallery {
 
@@ -100,9 +91,8 @@ button {
     text-align:center;
     z-index:5;
 
-    animation:fadeIn .8s;
-
 }
+
 
 
 #gallery p {
@@ -113,6 +103,7 @@ button {
 }
 
 
+
 .eyes {
 
 display:flex;
@@ -121,6 +112,7 @@ align-items:center;
 gap:10px;
 
 }
+
 
 
 .eyes img {
@@ -137,7 +129,8 @@ box-shadow:0 0 20px #ff4d88;
 }
 
 
-/* сердечки */
+
+
 
 #hearts {
 
@@ -150,6 +143,7 @@ z-index:10;
 }
 
 
+
 .heart {
 
 position:absolute;
@@ -157,6 +151,102 @@ font-size:25px;
 animation:float 4s linear;
 
 }
+
+
+
+
+
+#compliments {
+
+display:none;
+text-align:center;
+z-index:5;
+
+}
+
+
+
+#words {
+
+position:relative;
+height:300px;
+overflow:hidden;
+
+}
+
+
+
+.word {
+
+position:absolute;
+color:#ff4d88;
+font-size:25px;
+animation:wordFly 3s linear forwards;
+
+}
+
+
+
+
+
+/* 5 экран */
+
+#question {
+
+display:none;
+text-align:center;
+z-index:6;
+
+}
+
+
+
+#question h1 {
+
+font-size:30px;
+
+}
+
+
+
+.answers {
+
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:15px;
+
+}
+
+
+
+.answer {
+
+font-size:17px;
+
+}
+
+
+
+
+@keyframes appear {
+
+from {
+
+opacity:0;
+transform:translateY(20px);
+
+}
+
+to {
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
 
 
 
@@ -180,86 +270,6 @@ opacity:0;
 
 
 
-/* анимации */
-
-@keyframes appear {
-
-from {
-
-opacity:0;
-transform:translateY(20px);
-
-}
-
-
-to {
-
-opacity:1;
-transform:translateY(0);
-
-}
-
-}
-
-
-
-@keyframes fadeIn {
-
-from {
-
-opacity:0;
-transform:scale(.9);
-
-}
-
-to {
-
-opacity:1;
-transform:scale(1);
-
-}
-
-}
-.container {
-    display: block;
-}
-
-
-#finger {
-    display: none;
-}
-
-
-#gallery {
-    display: none;
-}
-#compliments {
-
-display:none;
-text-align:center;
-z-index:5;
-
-}
-
-
-#words {
-
-position:relative;
-height:300px;
-overflow:hidden;
-
-}
-
-
-.word {
-
-position:absolute;
-color:#ff4d88;
-font-size:25px;
-animation:wordFly 3s linear forwards;
-
-}
-
 
 @keyframes wordFly {
 
@@ -269,7 +279,6 @@ opacity:0;
 transform:translateY(200px) scale(.5);
 
 }
-
 
 to {
 
