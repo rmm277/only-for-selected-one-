@@ -20,6 +20,7 @@ document.getElementById("fingerBtn").onclick = function(){
 
 
 
+
 setInterval(function(){
 
     let heart = document.createElement("div");
@@ -47,13 +48,15 @@ setInterval(function(){
 
 
 
+
 document.getElementById("storyBtn").onclick = function(){
 
 
-    document.getElementById("gallery").style.display = "none";
+    document.getElementById("gallery").style.display="none";
 
 
-    document.getElementById("compliments").style.display = "block";
+    document.getElementById("compliments").style.display="block";
+
 
 
 
@@ -74,10 +77,11 @@ let words = [
 "Невероятная",
 "Уникальная",
 "Чудесная",
-"Настоящая",
 "Любимая ❤️"
 
 ];
+
+
 
 
 
@@ -87,7 +91,7 @@ let showWords = setInterval(function(){
 let w = document.createElement("div");
 
 
-w.className = "word";
+w.className="word";
 
 
 w.innerHTML = words[Math.floor(Math.random()*words.length)];
@@ -112,4 +116,72 @@ w.remove();
 },500);
 
 
+
 };
+
+
+
+
+
+
+
+
+document.getElementById("gameBtn").onclick = function(){
+
+
+document.getElementById("compliments").style.display="none";
+
+
+document.getElementById("question").style.display="block";
+
+
+};
+
+
+
+
+
+
+let answers = document.querySelectorAll(".answer");
+
+
+answers.forEach(function(button){
+
+
+button.onclick = function(){
+
+
+for(let i=0;i<25;i++){
+
+
+let heart = document.createElement("div");
+
+
+heart.className="heart";
+
+
+heart.innerHTML="❤️";
+
+
+heart.style.left=Math.random()*100+"%";
+
+
+document.getElementById("hearts").appendChild(heart);
+
+
+
+setTimeout(function(){
+
+heart.remove();
+
+},4000);
+
+
+
+}
+
+
+};
+
+
+});
