@@ -18,6 +18,7 @@ document.getElementById("fingerBtn").onclick = function(){
 
 
 
+
 setInterval(function(){
 
     let heart = document.createElement("div");
@@ -39,11 +40,23 @@ setInterval(function(){
 
 
 },700);
+
+
+
+
+
 document.getElementById("storyBtn").onclick = function(){
 
-document.getElementById("gallery").style.display="none";
 
-document.getElementById("compliments").style.display="block";
+    document.getElementById("gallery").style.display="none";
+
+    document.getElementById("finger").style.display="none";
+
+    document.getElementById("main").style.display="none";
+
+
+    document.getElementById("compliments").style.display="block";
+
 
 
 let words = [
@@ -67,7 +80,9 @@ let words = [
 ];
 
 
-setInterval(function(){
+
+let timer = setInterval(function(){
+
 
 let w=document.createElement("div");
 
@@ -75,19 +90,24 @@ w.className="word";
 
 w.innerHTML=words[Math.floor(Math.random()*words.length)];
 
+
 w.style.left=Math.random()*80+"%";
+
 
 document.getElementById("words").appendChild(w);
 
 
-setTimeout(()=>{
+
+setTimeout(function(){
 
 w.remove();
 
 },3000);
 
 
+
 },500);
+
 
 
 };
