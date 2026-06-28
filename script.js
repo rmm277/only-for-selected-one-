@@ -1,6 +1,6 @@
 document.getElementById("startBtn").onclick = function(){
 
-    document.querySelector(".container").style.display = "none";
+    document.getElementById("main").style.display = "none";
 
     document.getElementById("finger").style.display = "block";
 
@@ -15,6 +15,7 @@ document.getElementById("fingerBtn").onclick = function(){
     document.getElementById("gallery").style.display = "block";
 
 };
+
 
 
 
@@ -45,21 +46,19 @@ setInterval(function(){
 
 
 
+
 document.getElementById("storyBtn").onclick = function(){
 
 
-    document.getElementById("gallery").style.display="none";
-
-    document.getElementById("finger").style.display="none";
-
-    document.getElementById("main").style.display="none";
+    document.getElementById("gallery").style.display = "none";
 
 
-    document.getElementById("compliments").style.display="block";
+    document.getElementById("compliments").style.display = "block";
 
 
 
 let words = [
+
 "Красивая ❤️",
 "Добрая ✨",
 "Уютная 🌙",
@@ -77,21 +76,25 @@ let words = [
 "Чудесная",
 "Настоящая",
 "Любимая ❤️"
+
 ];
 
 
 
-let timer = setInterval(function(){
+let showWords = setInterval(function(){
 
 
-let w=document.createElement("div");
-
-w.className="word";
-
-w.innerHTML=words[Math.floor(Math.random()*words.length)];
+let w = document.createElement("div");
 
 
-w.style.left=Math.random()*80+"%";
+w.className = "word";
+
+
+w.innerHTML = words[Math.floor(Math.random()*words.length)];
+
+
+w.style.left = Math.random()*80+"%";
+
 
 
 document.getElementById("words").appendChild(w);
@@ -107,7 +110,6 @@ w.remove();
 
 
 },500);
-
 
 
 };
